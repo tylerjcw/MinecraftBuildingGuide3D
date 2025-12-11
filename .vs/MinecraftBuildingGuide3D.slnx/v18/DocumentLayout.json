@@ -1,0 +1,169 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\source\\cs\\MinecraftBuildingGuide3D\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{23F3B980-D760-7E64-3877-66D049AABAB1}|MinecraftBuildingGuide3D.csproj|f:\\source\\cs\\minecraftbuildingguide3d\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23F3B980-D760-7E64-3877-66D049AABAB1}|MinecraftBuildingGuide3D.csproj|solutionrelative:mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23F3B980-D760-7E64-3877-66D049AABAB1}|MinecraftBuildingGuide3D.csproj|f:\\source\\cs\\minecraftbuildingguide3d\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23F3B980-D760-7E64-3877-66D049AABAB1}|MinecraftBuildingGuide3D.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23F3B980-D760-7E64-3877-66D049AABAB1}|MinecraftBuildingGuide3D.csproj|f:\\source\\cs\\minecraftbuildingguide3d\\rendering\\glrenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23F3B980-D760-7E64-3877-66D049AABAB1}|MinecraftBuildingGuide3D.csproj|solutionrelative:rendering\\glrenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23F3B980-D760-7E64-3877-66D049AABAB1}|MinecraftBuildingGuide3D.csproj|f:\\source\\cs\\minecraftbuildingguide3d\\darkcontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23F3B980-D760-7E64-3877-66D049AABAB1}|MinecraftBuildingGuide3D.csproj|solutionrelative:darkcontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23F3B980-D760-7E64-3877-66D049AABAB1}|MinecraftBuildingGuide3D.csproj|f:\\source\\cs\\minecraftbuildingguide3d\\shapes\\shapegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23F3B980-D760-7E64-3877-66D049AABAB1}|MinecraftBuildingGuide3D.csproj|solutionrelative:shapes\\shapegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23F3B980-D760-7E64-3877-66D049AABAB1}|MinecraftBuildingGuide3D.csproj|f:\\source\\cs\\minecraftbuildingguide3d\\resources\\help.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{23F3B980-D760-7E64-3877-66D049AABAB1}|MinecraftBuildingGuide3D.csproj|solutionrelative:resources\\help.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23F3B980-D760-7E64-3877-66D049AABAB1}|MinecraftBuildingGuide3D.csproj|f:\\source\\cs\\minecraftbuildingguide3d\\minecraftbuildingguide3d.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{23F3B980-D760-7E64-3877-66D049AABAB1}|MinecraftBuildingGuide3D.csproj|solutionrelative:minecraftbuildingguide3d.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23F3B980-D760-7E64-3877-66D049AABAB1}|MinecraftBuildingGuide3D.csproj|f:\\source\\cs\\minecraftbuildingguide3d\\rendering\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23F3B980-D760-7E64-3877-66D049AABAB1}|MinecraftBuildingGuide3D.csproj|solutionrelative:rendering\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23F3B980-D760-7E64-3877-66D049AABAB1}|MinecraftBuildingGuide3D.csproj|f:\\source\\cs\\minecraftbuildingguide3d\\rendering\\shaderprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23F3B980-D760-7E64-3877-66D049AABAB1}|MinecraftBuildingGuide3D.csproj|solutionrelative:rendering\\shaderprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DarkControls.cs",
+              "DocumentMoniker": "F:\\source\\cs\\MinecraftBuildingGuide3D\\DarkControls.cs",
+              "RelativeDocumentMoniker": "DarkControls.cs",
+              "ToolTip": "F:\\source\\cs\\MinecraftBuildingGuide3D\\DarkControls.cs",
+              "RelativeToolTip": "DarkControls.cs",
+              "ViewState": "AgIAAHsCAAAAAAAAAAAgwKECAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T09:42:57.432Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ShapeGenerator.cs",
+              "DocumentMoniker": "F:\\source\\cs\\MinecraftBuildingGuide3D\\Shapes\\ShapeGenerator.cs",
+              "RelativeDocumentMoniker": "Shapes\\ShapeGenerator.cs",
+              "ToolTip": "F:\\source\\cs\\MinecraftBuildingGuide3D\\Shapes\\ShapeGenerator.cs",
+              "RelativeToolTip": "Shapes\\ShapeGenerator.cs",
+              "ViewState": "AgIAAHwEAAAAAAAAAAAgwKIEAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T04:48:55.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Camera.cs",
+              "DocumentMoniker": "F:\\source\\cs\\MinecraftBuildingGuide3D\\Rendering\\Camera.cs",
+              "RelativeDocumentMoniker": "Rendering\\Camera.cs",
+              "ToolTip": "F:\\source\\cs\\MinecraftBuildingGuide3D\\Rendering\\Camera.cs",
+              "RelativeToolTip": "Rendering\\Camera.cs",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAgwNQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T04:48:29.198Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "F:\\source\\cs\\MinecraftBuildingGuide3D\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "F:\\source\\cs\\MinecraftBuildingGuide3D\\MainForm.cs",
+              "RelativeToolTip": "MainForm.cs",
+              "ViewState": "AgIAAFEEAAAAAAAAAAAgwHoEAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T04:03:15.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainForm.Designer.cs",
+              "DocumentMoniker": "F:\\source\\cs\\MinecraftBuildingGuide3D\\MainForm.Designer.cs",
+              "RelativeDocumentMoniker": "MainForm.Designer.cs",
+              "ToolTip": "F:\\source\\cs\\MinecraftBuildingGuide3D\\MainForm.Designer.cs",
+              "RelativeToolTip": "MainForm.Designer.cs",
+              "ViewState": "AgIAABMCAAAAAAAAAAAgwDkCAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T04:03:09.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ShaderProgram.cs",
+              "DocumentMoniker": "F:\\source\\cs\\MinecraftBuildingGuide3D\\Rendering\\ShaderProgram.cs",
+              "RelativeDocumentMoniker": "Rendering\\ShaderProgram.cs",
+              "ToolTip": "F:\\source\\cs\\MinecraftBuildingGuide3D\\Rendering\\ShaderProgram.cs",
+              "RelativeToolTip": "Rendering\\ShaderProgram.cs",
+              "ViewState": "AgIAANYAAAAAAAAAAAAgwPwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T04:02:48.363Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GLRenderer.cs",
+              "DocumentMoniker": "F:\\source\\cs\\MinecraftBuildingGuide3D\\Rendering\\GLRenderer.cs",
+              "RelativeDocumentMoniker": "Rendering\\GLRenderer.cs",
+              "ToolTip": "F:\\source\\cs\\MinecraftBuildingGuide3D\\Rendering\\GLRenderer.cs",
+              "RelativeToolTip": "Rendering\\GLRenderer.cs",
+              "ViewState": "AgIAANMDAAAAAAAAAAAgwPkDAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T04:02:36.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Help.html",
+              "DocumentMoniker": "F:\\source\\cs\\MinecraftBuildingGuide3D\\Resources\\Help.html",
+              "RelativeDocumentMoniker": "Resources\\Help.html",
+              "ToolTip": "F:\\source\\cs\\MinecraftBuildingGuide3D\\Resources\\Help.html",
+              "RelativeToolTip": "Resources\\Help.html",
+              "ViewState": "AgIAAHIDAAAAAAAAAADwv5kDAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-12-01T07:55:33.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MinecraftBuildingGuide3D.csproj",
+              "DocumentMoniker": "F:\\source\\cs\\MinecraftBuildingGuide3D\\MinecraftBuildingGuide3D.csproj",
+              "RelativeDocumentMoniker": "MinecraftBuildingGuide3D.csproj",
+              "ToolTip": "F:\\source\\cs\\MinecraftBuildingGuide3D\\MinecraftBuildingGuide3D.csproj",
+              "RelativeToolTip": "MinecraftBuildingGuide3D.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-01T07:54:51.649Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

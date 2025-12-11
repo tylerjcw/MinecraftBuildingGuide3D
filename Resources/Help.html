@@ -1,0 +1,922 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Building Guide 3D - Help Documentation</title>
+    <style>
+        :root {
+            --bg-primary: #1a1a24;
+            --bg-secondary: #22222e;
+            --bg-tertiary: #2a2a38;
+            --text-primary: #e0e0e8;
+            --text-secondary: #a0a0b0;
+            --accent-blue: #4a90d9;
+            --accent-green: #5cb85c;
+            --accent-orange: #f0ad4e;
+            --accent-red: #d9534f;
+            --border-color: #3a3a4a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 280px;
+            background-color: var(--bg-secondary);
+            border-right: 1px solid var(--border-color);
+            padding: 20px 0;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+            .sidebar h2 {
+                color: var(--accent-blue);
+                font-size: 14px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                padding: 10px 20px;
+                margin-top: 15px;
+            }
+
+                .sidebar h2:first-child {
+                    margin-top: 0;
+                }
+
+            .sidebar a {
+                display: block;
+                color: var(--text-secondary);
+                text-decoration: none;
+                padding: 8px 20px 8px 30px;
+                font-size: 14px;
+                transition: all 0.2s;
+            }
+
+                .sidebar a:hover {
+                    background-color: var(--bg-tertiary);
+                    color: var(--text-primary);
+                }
+
+        /* Main Content */
+        .content {
+            margin-left: 280px;
+            padding: 40px 60px;
+            max-width: 900px;
+        }
+
+        h1 {
+            color: var(--accent-blue);
+            font-size: 32px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid var(--accent-blue);
+            padding-bottom: 10px;
+        }
+
+        .version {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--accent-green);
+            font-size: 24px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        h3 {
+            color: var(--accent-orange);
+            font-size: 18px;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+
+        ul, ol {
+            margin-bottom: 15px;
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .tip {
+            background-color: var(--bg-tertiary);
+            border-left: 4px solid var(--accent-green);
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .tip-title {
+            color: var(--accent-green);
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .warning {
+            background-color: var(--bg-tertiary);
+            border-left: 4px solid var(--accent-orange);
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .warning-title {
+            color: var(--accent-orange);
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: var(--bg-secondary);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: var(--bg-tertiary);
+            color: var(--accent-blue);
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background-color: var(--bg-tertiary);
+        }
+
+        code {
+            background-color: var(--bg-tertiary);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Consolas', monospace;
+            font-size: 14px;
+            color: var(--accent-orange);
+        }
+
+        kbd {
+            background-color: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 3px;
+            padding: 2px 6px;
+            font-family: 'Consolas', monospace;
+            font-size: 13px;
+            box-shadow: 0 2px 0 var(--border-color);
+        }
+
+        .shortcut {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .color-blue {
+            color: var(--accent-blue);
+        }
+
+        .color-red {
+            color: var(--accent-red);
+        }
+
+        .color-green {
+            color: var(--accent-green);
+        }
+
+        .shape-card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 15px 20px;
+            margin: 15px 0;
+        }
+
+            .shape-card h4 {
+                color: var(--accent-blue);
+                margin-bottom: 8px;
+            }
+
+        .param-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .param {
+            background-color: var(--bg-tertiary);
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <h2>Getting Started</h2>
+            <a href="#introduction">Introduction</a>
+            <a href="#quick-start">Quick Start Guide</a>
+            <a href="#interface">Interface Overview</a>
+
+            <h2>Controls</h2>
+            <a href="#camera-3d">3D Camera Controls</a>
+            <a href="#camera-2d">2D Layer View</a>
+            <a href="#build-mode">Building Mode</a>
+            <a href="#guide-planes">Guide Planes</a>
+
+            <h2>Shapes</h2>
+            <a href="#basic-shapes">Basic Shapes</a>
+            <a href="#domes-roofs">Domes &amp; Roofs</a>
+            <a href="#arches-bridges">Arches &amp; Bridges</a>
+            <a href="#norman">Norman Architecture</a>
+            <a href="#complex">Complex Shapes</a>
+            <a href="#spirals">Spirals &amp; Helixes</a>
+
+            <h2>Options</h2>
+            <a href="#hollow">Hollow Mode</a>
+            <a href="#edge-modes">Edge Modes</a>
+            <a href="#arch-styles">Arch Styles</a>
+            <a href="#rendering">Rendering Options</a>
+
+            <h2>Reference</h2>
+            <a href="#minecraft-info">Minecraft Information</a>
+            <a href="#shortcuts">Keyboard Shortcuts</a>
+            <a href="#tips">Tips &amp; Tricks</a>
+        </nav>
+
+        <main class="content">
+            <h1>Minecraft Building Guide 3D</h1>
+            <p class="version">Version 0.5.0 (Pre-Alpha) | Developer: Komrad Toast</p>
+
+            <section id="introduction">
+                <h2>Introduction</h2>
+                <p>
+                    Minecraft Building Guide 3D is a powerful voxel shape generator designed to help you plan
+                    and visualize complex Minecraft builds before construction. Generate spheres, domes,
+                    arches, bridges, towers, and many other architectural forms with precise block-by-block
+                    visualization.
+                </p>
+                <p>
+                    The application provides both 3D viewing for overall visualization and 2D layer-by-layer
+                    views for actual in-game construction. Material counts, stack calculations, and dimension
+                    information help you prepare the right resources before building.
+                </p>
+            </section>
+
+            <section id="quick-start">
+                <h2>Quick Start Guide</h2>
+                <ol>
+                    <li><strong>Select a Shape:</strong> Use the dropdown menu in the Shapes tab to choose your desired shape type.</li>
+                    <li><strong>Set Parameters:</strong> Adjust the size parameters (radius, height, width, etc.) to your specifications.</li>
+                    <li><strong>Configure Options:</strong> Enable Hollow mode if you want a shell, adjust wall thickness as needed.</li>
+                    <li><strong>Generate:</strong> Click the green "Generate" button to create your shape.</li>
+                    <li><strong>Explore:</strong> Use mouse controls to rotate, pan, and zoom around your creation.</li>
+                    <li><strong>Build:</strong> Switch to 2D Layer View and use the layer slider to build layer-by-layer in Minecraft.</li>
+                </ol>
+            </section>
+
+            <section id="interface">
+                <h2>Interface Overview</h2>
+                <p>The interface is divided into three main areas:</p>
+
+                <h3>Control Panel (Left)</h3>
+                <p>Contains three tabs:</p>
+                <ul>
+                    <li><strong>Shapes:</strong> Shape selection, parameters, and generation controls</li>
+                    <li><strong>View:</strong> Camera controls, layer viewing, and rendering options</li>
+                    <li><strong>Build:</strong> Manual block placement mode and guide plane controls</li>
+                </ul>
+
+                <h3>3D Viewport (Center)</h3>
+                <p>The main viewing area where your shape is displayed. Supports full 3D navigation in normal mode, or 2D top-down view in layer mode.</p>
+
+                <h3>Status Bar (Bottom)</h3>
+                <p>Displays current control hints and mode information.</p>
+            </section>
+
+            <section id="camera-3d">
+                <h2>3D Camera Controls</h2>
+                <table>
+                    <tr>
+                        <th>Action</th>
+                        <th>Control</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>Rotate</td>
+                        <td><kbd>Left Mouse</kbd> + Drag</td>
+                        <td>Orbit the camera around the shape</td>
+                    </tr>
+                    <tr>
+                        <td>Pan</td>
+                        <td><kbd>Right Mouse</kbd> + Drag</td>
+                        <td>Move the view horizontally/vertically</td>
+                    </tr>
+                    <tr>
+                        <td>Zoom</td>
+                        <td><kbd>Scroll Wheel</kbd></td>
+                        <td>Zoom in and out</td>
+                    </tr>
+                    <tr>
+                        <td>Reset View</td>
+                        <td><kbd>Middle Mouse</kbd> Click</td>
+                        <td>Reset camera to fit the shape in view</td>
+                    </tr>
+                </table>
+
+                <h3>Camera View Buttons</h3>
+                <p>The View tab provides quick access to standard orthographic views:</p>
+                <table>
+                    <tr>
+                        <th>Button</th>
+                        <th>View</th>
+                    </tr>
+                    <tr><td>Reset</td><td>Isometric view fitted to shape</td></tr>
+                    <tr><td>Top</td><td>Looking down (bird's eye)</td></tr>
+                    <tr><td>Front</td><td>Looking at front face</td></tr>
+                    <tr><td>Corner</td><td>Pleasing 35° corner view</td></tr>
+                    <tr><td>Left / Right</td><td>Side views</td></tr>
+                    <tr><td>Back</td><td>Looking at back face</td></tr>
+                    <tr><td>Bottom</td><td>Looking up from below</td></tr>
+                </table>
+            </section>
+
+            <section id="camera-2d">
+                <h2>2D Layer View</h2>
+                <p>
+                    The 2D Layer View is essential for actual Minecraft construction. It shows a single
+                    horizontal slice of your shape from directly above, making it easy to count blocks
+                    and replicate the pattern in-game.
+                </p>
+
+                <h3>Enabling 2D Mode</h3>
+                <ol>
+                    <li>Go to the <strong>View</strong> tab</li>
+                    <li>Check the <strong>"2D Layer View"</strong> checkbox</li>
+                    <li>Use the <strong>Layer (Y)</strong> slider or number input to select which layer to view</li>
+                </ol>
+
+                <h3>2D Navigation</h3>
+                <table>
+                    <tr>
+                        <th>Action</th>
+                        <th>Control</th>
+                    </tr>
+                    <tr>
+                        <td>Pan</td>
+                        <td><kbd>Left Mouse</kbd> or <kbd>Right Mouse</kbd> + Drag</td>
+                    </tr>
+                    <tr>
+                        <td>Zoom</td>
+                        <td><kbd>Scroll Wheel</kbd></td>
+                    </tr>
+                </table>
+
+                <div class="tip">
+                    <div class="tip-title">💡 Building Tip</div>
+                    Start from layer 0 (ground level) and work your way up. Each layer shows exactly
+                    which blocks to place at that Y-coordinate in Minecraft.
+                </div>
+            </section>
+
+            <section id="build-mode">
+                <h2>Building Mode</h2>
+                <p>
+                    Building mode allows you to manually add or remove individual blocks from your shape.
+                    This is useful for customization or fixing small details.
+                </p>
+
+                <h3>Modes</h3>
+                <ul>
+                    <li><strong class="color-green">Add Mode:</strong> Left-click on any block face to place a new block adjacent to it</li>
+                    <li><strong class="color-red">Remove Mode:</strong> Left-click on any block to delete it</li>
+                    <li><strong>Off:</strong> Normal viewing mode - clicks don't modify the shape</li>
+                </ul>
+
+                <div class="tip">
+                    <div class="tip-title">💡 Tip</div>
+                    Camera controls (rotate, pan, zoom) work normally in all build modes. You don't
+                    need to switch modes to navigate the view.
+                </div>
+            </section>
+
+            <section id="guide-planes">
+                <h2>Guide Planes</h2>
+                <p>
+                    Guide planes are semi-transparent reference planes with grid lines that help you
+                    place blocks in empty space. They're essential when building floating structures
+                    or adding details that don't connect to existing blocks.
+                </p>
+
+                <h3>Available Planes</h3>
+                <table>
+                    <tr>
+                        <th>Plane</th>
+                        <th>Color</th>
+                        <th>Orientation</th>
+                        <th>Position Control</th>
+                    </tr>
+                    <tr>
+                        <td>XZ Plane</td>
+                        <td class="color-blue">Blue</td>
+                        <td>Horizontal</td>
+                        <td>Y value</td>
+                    </tr>
+                    <tr>
+                        <td>XY Plane</td>
+                        <td class="color-red">Red</td>
+                        <td>Vertical (front/back)</td>
+                        <td>Z value</td>
+                    </tr>
+                    <tr>
+                        <td>YZ Plane</td>
+                        <td class="color-green">Green</td>
+                        <td>Vertical (left/right)</td>
+                        <td>X value</td>
+                    </tr>
+                </table>
+
+                <div class="tip">
+                    <div class="tip-title">💡 Quadrant-Based Visibility</div>
+                    Like Blender, planes only appear when you're viewing them from the "correct" side.
+                    This prevents visual clutter when planes would overlap. Rotate the camera to see
+                    planes from different angles.
+                </div>
+            </section>
+
+            <section id="basic-shapes">
+                <h2>Basic Shapes</h2>
+
+                <div class="shape-card">
+                    <h4>Sphere</h4>
+                    <p>A perfect voxelized sphere. Great for decorative elements, planet builds, or ball structures.</p>
+                    <div class="param-list">
+                        <span class="param">Radius</span>
+                    </div>
+                </div>
+
+                <div class="shape-card">
+                    <h4>Cylinder</h4>
+                    <p>A vertical cylinder. Useful for towers, pillars, wells, and silos.</p>
+                    <div class="param-list">
+                        <span class="param">Radius</span>
+                        <span class="param">Height</span>
+                    </div>
+                </div>
+
+                <div class="shape-card">
+                    <h4>Cone</h4>
+                    <p>A conical shape tapering to a point. The Step Height parameter controls how many blocks per step.</p>
+                    <div class="param-list">
+                        <span class="param">Radius</span>
+                        <span class="param">Height</span>
+                        <span class="param">Step Height</span>
+                    </div>
+                </div>
+
+                <div class="shape-card">
+                    <h4>Pyramid</h4>
+                    <p>A square-based pyramid. Step Height controls the terrace/ziggurat effect.</p>
+                    <div class="param-list">
+                        <span class="param">Base Size</span>
+                        <span class="param">Height</span>
+                        <span class="param">Step Height</span>
+                    </div>
+                </div>
+
+                <div class="shape-card">
+                    <h4>Cuboid</h4>
+                    <p>A rectangular box. Basic but essential for many builds.</p>
+                    <div class="param-list">
+                        <span class="param">Width</span>
+                        <span class="param">Height</span>
+                        <span class="param">Depth</span>
+                    </div>
+                </div>
+
+                <div class="shape-card">
+                    <h4>Ellipsoid</h4>
+                    <p>A stretched sphere with independent X, Y, and Z radii.</p>
+                    <div class="param-list">
+                        <span class="param">X Radius</span>
+                        <span class="param">Y Radius</span>
+                        <span class="param">Z Radius</span>
+                    </div>
+                </div>
+
+                <div class="shape-card">
+                    <h4>Torus</h4>
+                    <p>A donut shape. Perfect for decorative rings, portals, or fantasy structures.</p>
+                    <div class="param-list">
+                        <span class="param">Major Radius (ring)</span>
+                        <span class="param">Minor Radius (tube)</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="domes-roofs">
+                <h2>Domes &amp; Roofs</h2>
+
+                <div class="shape-card">
+                    <h4>Dome</h4>
+                    <p>A hemisphere with adjustable proportions. Height % stretches vertically, Base % stretches horizontally.</p>
+                    <div class="param-list">
+                        <span class="param">Radius</span>
+                        <span class="param">Height % (100=hemisphere)</span>
+                        <span class="param">Base % (100=circular)</span>
+                    </div>
+                </div>
+
+                <div class="shape-card">
+                    <h4>Onion Dome</h4>
+                    <p>Russian/Eastern Orthodox style dome that bulges outward before tapering to a point with a finial spike.</p>
+                    <div class="param-list">
+                        <span class="param">Radius</span>
+                        <span class="param">Height</span>
+                    </div>
+                </div>
+
+                <div class="shape-card">
+                    <h4>Wizard Tower Roof</h4>
+                    <p>A tall, slender concave conical roof with a slight flare at the base. Perfect for fantasy towers and spires.</p>
+                    <div class="param-list">
+                        <span class="param">Base Radius</span>
+                        <span class="param">Height</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="arches-bridges">
+                <h2>Arches &amp; Bridges</h2>
+
+                <div class="shape-card">
+                    <h4>Arch</h4>
+                    <p>A freestanding archway. Choose from Round (Roman), Pointed (Gothic), or Segmental styles.</p>
+                    <div class="param-list">
+                        <span class="param">Width</span>
+                        <span class="param">Height</span>
+                        <span class="param">Depth</span>
+                        <span class="param">Style</span>
+                    </div>
+                </div>
+
+                <div class="shape-card">
+                    <h4>Bridge (Aqueduct)</h4>
+                    <p>A Roman-style aqueduct bridge with multiple tiers of arches. Higher levels have more, smaller arches.</p>
+                    <div class="param-list">
+                        <span class="param">Length</span>
+                        <span class="param">Height</span>
+                        <span class="param">Width</span>
+                        <span class="param">Arches per Level</span>
+                        <span class="param">Levels (tiers)</span>
+                        <span class="param">Arch Style</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="norman">
+                <h2>Norman Architecture</h2>
+                <p>
+                    Norman (Romanesque) architecture is characterized by massive construction, thick walls,
+                    round arches, and defensive features like battlements and arrow slits. These shapes
+                    are perfect for medieval castle builds.
+                </p>
+
+                <div class="shape-card">
+                    <h4>Norman Wall</h4>
+                    <p>A fortified castle wall with crenellations (battlements), arrow slits, and a wall walk platform.</p>
+                    <div class="param-list">
+                        <span class="param">Length</span>
+                        <span class="param">Height</span>
+                        <span class="param">Thickness</span>
+                        <span class="param">Crenel Width</span>
+                    </div>
+                </div>
+
+                <div class="shape-card">
+                    <h4>Norman Tower</h4>
+                    <p>A cylindrical defensive tower with floor divisions, window openings, and battlements at the top.</p>
+                    <div class="param-list">
+                        <span class="param">Radius</span>
+                        <span class="param">Height</span>
+                        <span class="param">Floors</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="complex">
+                <h2>Complex Shapes</h2>
+
+                <div class="shape-card">
+                    <h4>Paraboloid</h4>
+                    <p>A parabolic dish shape. Widens as it goes up. Useful for satellite dishes, bowls, or amphitheaters.</p>
+                    <div class="param-list">
+                        <span class="param">Radius</span>
+                        <span class="param">Height</span>
+                    </div>
+                </div>
+
+                <div class="shape-card">
+                    <h4>Hyperboloid</h4>
+                    <p>An hourglass or cooling tower shape. Narrower in the middle than at top and bottom.</p>
+                    <div class="param-list">
+                        <span class="param">Top Radius</span>
+                        <span class="param">Waist Radius</span>
+                        <span class="param">Height</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="spirals">
+                <h2>Spirals &amp; Helixes</h2>
+
+                <div class="shape-card">
+                    <h4>Spiral Staircase</h4>
+                    <p>A helical staircase with a central pillar. Each step is one block high.</p>
+                    <div class="param-list">
+                        <span class="param">Radius</span>
+                        <span class="param">Height (steps)</span>
+                        <span class="param">Steps per Rotation</span>
+                        <span class="param">Pillar Radius</span>
+                    </div>
+                </div>
+
+                <div class="shape-card">
+                    <h4>Helix</h4>
+                    <p>A DNA-like spiral structure. Can have multiple intertwined strands.</p>
+                    <div class="param-list">
+                        <span class="param">Radius</span>
+                        <span class="param">Height</span>
+                        <span class="param">Rotations</span>
+                        <span class="param">Strands (1-8)</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="hollow">
+                <h2>Hollow Mode</h2>
+                <p>
+                    When enabled, shapes are generated as shells instead of solid blocks. This is useful
+                    for buildings you want to enter, or when you need to conserve materials.
+                </p>
+
+                <h3>Wall Thickness</h3>
+                <p>
+                    The <strong>Wall</strong> parameter controls how thick the shell walls are. A value
+                    of 1 creates a single-block thick shell, while higher values create thicker walls.
+                </p>
+
+                <div class="warning">
+                    <div class="warning-title">⚠️ Note</div>
+                    Not all shapes support hollow mode. Spiral staircases and some complex shapes are
+                    always generated with their natural structure.
+                </div>
+            </section>
+
+            <section id="edge-modes">
+                <h2>Edge Modes</h2>
+                <p>
+                    Edge modes affect how circular shapes handle diagonal connections. In Minecraft,
+                    diagonal blocks don't physically connect, which can create visible gaps in curves.
+                </p>
+
+                <table>
+                    <tr>
+                        <th>Mode</th>
+                        <th>Effect</th>
+                        <th>Best For</th>
+                    </tr>
+                    <tr>
+                        <td>Normal</td>
+                        <td>Standard voxelization</td>
+                        <td>Most builds</td>
+                    </tr>
+                    <tr>
+                        <td>Heavy Inside</td>
+                        <td>Extra blocks fill inner diagonal gaps</td>
+                        <td>Solid-looking exteriors</td>
+                    </tr>
+                    <tr>
+                        <td>Heavy Outside</td>
+                        <td>Extra blocks fill outer diagonal gaps</td>
+                        <td>Smooth interior walls</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="arch-styles">
+                <h2>Arch Styles</h2>
+                <p>Three architectural arch styles are available for arches and bridges:</p>
+
+                <table>
+                    <tr>
+                        <th>Style</th>
+                        <th>Description</th>
+                        <th>Historical Context</th>
+                    </tr>
+                    <tr>
+                        <td>Round</td>
+                        <td>Perfect semicircle</td>
+                        <td>Roman, Romanesque</td>
+                    </tr>
+                    <tr>
+                        <td>Pointed</td>
+                        <td>Two arcs meeting at a peak</td>
+                        <td>Gothic, Medieval</td>
+                    </tr>
+                    <tr>
+                        <td>Segmental</td>
+                        <td>Flatter, wider arc</td>
+                        <td>Renaissance, Modern</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="rendering">
+                <h2>Rendering Options</h2>
+                <p>Found in the View tab, these options control how shapes are displayed:</p>
+
+                <table>
+                    <tr>
+                        <th>Option</th>
+                        <th>Effect</th>
+                    </tr>
+                    <tr>
+                        <td>Grid</td>
+                        <td>Shows/hides the floor reference grid</td>
+                    </tr>
+                    <tr>
+                        <td>Lighting</td>
+                        <td>Enables directional lighting for depth perception</td>
+                    </tr>
+                    <tr>
+                        <td>Outlines</td>
+                        <td>Draws black edges around each block</td>
+                    </tr>
+                    <tr>
+                        <td>Border</td>
+                        <td>Adjusts outline thickness (1-15 pixels)</td>
+                    </tr>
+                    <tr>
+                        <td>Alpha</td>
+                        <td>Controls transparency (10-100%)</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="minecraft-info">
+                <h2>Minecraft Information</h2>
+                <p>The Shape Info panel displays helpful data for planning your build:</p>
+
+                <table>
+                    <tr>
+                        <th>Field</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>Size (L×W×H)</td>
+                        <td>Dimensions matching Minecraft's X × Z × Y coordinate system</td>
+                    </tr>
+                    <tr>
+                        <td>Blocks</td>
+                        <td>Total number of blocks in the shape</td>
+                    </tr>
+                    <tr>
+                        <td>Stacks</td>
+                        <td>Number of 64-block stacks plus remainder</td>
+                    </tr>
+                    <tr>
+                        <td>Shulker Boxes</td>
+                        <td>Number of shulker boxes needed (27 stacks each)</td>
+                    </tr>
+                </table>
+
+                <div class="tip">
+                    <div class="tip-title">💡 Material Planning</div>
+                    Use the Stacks and Shulker Box counts to gather materials before starting your
+                    build. This prevents frustrating trips back to base mid-construction!
+                </div>
+            </section>
+
+            <section id="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+                <p>Currently, most interactions use mouse controls. Keyboard shortcuts are planned for future versions.</p>
+
+                <h3>Mouse Controls Summary</h3>
+                <table>
+                    <tr>
+                        <th>Control</th>
+                        <th>3D Mode</th>
+                        <th>2D Mode</th>
+                        <th>Build Mode</th>
+                    </tr>
+                    <tr>
+                        <td>Left Drag</td>
+                        <td>Rotate</td>
+                        <td>Pan</td>
+                        <td>Place/Remove block</td>
+                    </tr>
+                    <tr>
+                        <td>Right Drag</td>
+                        <td>Pan</td>
+                        <td>Pan</td>
+                        <td>Pan (camera)</td>
+                    </tr>
+                    <tr>
+                        <td>Scroll</td>
+                        <td>Zoom</td>
+                        <td>Zoom</td>
+                        <td>Zoom</td>
+                    </tr>
+                    <tr>
+                        <td>Middle Click</td>
+                        <td>Reset View</td>
+                        <td>—</td>
+                        <td>Reset View</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="tips">
+                <h2>Tips &amp; Tricks</h2>
+
+                <div class="tip">
+                    <div class="tip-title">🎯 Building Large Structures</div>
+                    For very large builds, generate the shape and use 2D Layer View. Screenshot or
+                    print each layer, then work through them systematically in Minecraft.
+                </div>
+
+                <div class="tip">
+                    <div class="tip-title">🏗️ Hollow Structures</div>
+                    When building hollow structures, generate with Wall thickness of 2-3 for structural
+                    stability. Single-block walls can look thin and may have lighting issues.
+                </div>
+
+                <div class="tip">
+                    <div class="tip-title">🌉 Multi-Level Bridges</div>
+                    Start with the default 2 levels and adjust. More levels create more dramatic
+                    aqueducts, but require more height clearance.
+                </div>
+
+                <div class="tip">
+                    <div class="tip-title">🔄 Auto-Fit View</div>
+                    Keep "Auto-Fit View" enabled to automatically center and zoom the camera when
+                    generating new shapes. Disable it if you want to maintain your current viewpoint.
+                </div>
+
+                <div class="tip">
+                    <div class="tip-title">✏️ Fine-Tuning</div>
+                    Use Build Mode to add or remove individual blocks after generation. This is perfect
+                    for adding doors, windows, or fixing small imperfections.
+                </div>
+
+                <div class="tip">
+                    <div class="tip-title">📐 Norman Towers</div>
+                    Place Norman Towers at the corners of your Norman Walls for an authentic castle
+                    look. Use the same radius for a consistent appearance.
+                </div>
+            </section>
+
+            <footer style="margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 13px;">
+                <p>Minecraft Building Guide 3D v0.5.0 (Pre-Alpha)</p>
+                <p>© 2026 Komrad Toast | MIT License</p>
+                <p>Minecraft is a trademark of Mojang Studios. This application is not affiliated with Mojang.</p>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>
